@@ -69,11 +69,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.html">Historia</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="encargo.html">Encargos <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="encargo.html">Encargos </a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="contacto.html">Contacto </a>
+              <li class="nav-item active">
+                <a class="nav-link" href="contacto.html">Contacto <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="infoAutor.html">Autor</a>
@@ -101,106 +101,54 @@
     <div class="row justify-content-center">
      
       <div class="col-md-6">
-        <div class="form_container">
-          <form action="" class="form">
-              <!-- Información del cliente -->
-              <h3>Información del cliente</h3>
-              <label for="nombreCliente">Nombre completo:</label>
-              <input type="text" id="nombreCliente"  name="nombreCliente" class="form-control" placeholder="Escribe tu nombre" required>
-      
-              <label for="emailCliente">Correo electrónico:</label>
-              <input type="email" id="emailCliente" class="form-control" placeholder="Ejemplo: tucorreo@ejemplo.com" required>
-      
-              <label for="telefonoCliente">Teléfono:</label>
-              <input type="tel" id="telefonoCliente" class="form-control" placeholder="Número de contacto" required>
-      
-              <hr>
-      
-              <!-- Detalles de la piñata -->
-              <h3>Detalles de la piñata</h3>
-              <label for="temaPinata">Tema o personaje:</label>
-              <input type="text" id="temaPinata" class="form-control" placeholder="Ejemplo: Frozen, Spiderman" required>
-      
-              <label for="diseñoPinnata">Diseño de piñata (opcional):</label>
-              <input type="file" class="form-control" id="diseñoPinnata" name="diseñoPinnata" accept="image/*">
-      
-              <label for="tamanoPinata">Tamaño:</label>
-              <select id="tamanoPinata" name="tamanoPinata" class="form-control" >
-                  <option value="" disabled selected>Selecciona un tamaño</option>
-                  <option value="pequena">Pequeña</option>
-                  <option value="mediana">Mediana</option>
-                  <option value="grande">Grande</option>
-              </select>
-      
-           <br><br><br>
-              <hr>
-              <!-- Decoración adicional -->
-              <h3>Decoración adicional</h3>
-              <label>¿Deseas agregar decoración adicional?</label>
-              <div>
-                  <input type="radio" id="decoracionSi" name="decoracionAdi" value="si">
-                  <label for="decoracionSi">Sí</label>
-                  <br>
-                  <input type="radio" id="decoracionNo" name="decoracionAdi" value="no">
-                  <label for="decoracionNo">No</label>
-              </div>
-      
-              <div id="opcionesDecoracion" style="display: none;">
-                  <div>
-                      <label>¿Deseas agregar bolsitas?</label>
-                      <div>
-                          <input type="radio" id="bolsitasSi" name="bolsitas" value="si">
-                          <label for="bolsitasSi">Sí</label>
-                          <br>
-                          <input type="text" id="cantidadBolsitas" class="form-control" placeholder="¿Cuántas?" style="display: none;" />
-                          <input type="radio" id="bolsitasNo" name="bolsitas" value="no">
-                          <label for="bolsitasNo">No</label>
-                      </div>
-                  </div>
-                  <div>
-                      <label>¿Deseas agregar el palito para la piñata?</label>
-                      <div>
-                          <input type="radio" id="palitoSi" name="palitoPinnata" value="si">
-                          <label for="palitoSi">Sí</label>
-                          <br>
-                          <input type="radio" id="palitoNo" name="palitoPinnata" value="no">
-                          <label for="palitoNo">No</label>
-                      </div>
-                  </div>
-                  <div>
-                      <label>¿Deseas agregar centros de mesa?</label>
-                      <div>
-                          <input type="radio" id="centrosSi" name="centrosMesa" value="si">
-                          <label for="centrosSi">Sí</label>
-                          <br>
-                          <input type="text" id="cantidadCentros" class="form-control" placeholder="¿Cuántos?" style="display: none;" />
-                          <input type="radio" id="centrosNo" name="centrosMesa" value="no">
-                          <label for="centrosNo">No</label>
-                      </div>
-                  </div>
-              </div>
-      
-              <hr>
-      
-              <!-- Fecha de entrega -->
-              <h3>Fecha de entrega</h3>
-              <label for="fechaEntrega">Fecha de entrega requerida:</label>
-              <input type="date" id="fechaEntrega" class="form-control" required>
-      
-              <hr>
-      
-              <!-- Comentarios adicionales -->
-              <h3>Comentarios adicionales</h3>
-              <label for="comentarios">Notas o solicitudes especiales:</label>
-              <textarea id="comentarios" class="form-control" placeholder="Ejemplo: Quiero incluir detalles en color azul y dorado."></textarea>
-      
-              <!-- Botón de envío -->
-              <div class="btn_box">
-                  <button type="submit">
-                      Enviar pedido
-                  </button>
-              </div>
-          </form>
+        <div class="form_container mt-5">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">Formulario de Registro</h2>
+                <form id="registroForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" id="email" class="form-control">
+                        <small class="text-danger d-none" id="errorEmail">Introduce un correo válido.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="text" id="nombre" class="form-control">
+                        <small class="text-danger d-none" id="errorNombre">El nombre es obligatorio.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" id="fechaNacimiento" class="form-control">
+                        <small class="text-danger d-none" id="errorFecha">Selecciona una fecha válida.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ingreso" class="form-label">Rango de Ingreso</label>
+                        <input type="number" id="ingreso" class="form-control">
+                        <small class="text-danger d-none" id="errorIngreso">El ingreso es obligatorio y debe ser un número válido.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="genero" class="form-label">Género</label>
+                        <select id="genero" class="form-control">
+                            <option value="">Selecciona tu género</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                        </select>
+                        <small class="text-danger d-none" id="errorGenero">Selecciona tu género.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gradoAcademico" class="form-label">Grado Académico</label>
+                        <select id="gradoAcademico" class="form-control" >
+                            <option value="secundaria">Secundaria</option>
+                            <option value="bachillerato">Bachillerato</option>
+                            <option value="universidad">Universidad</option>
+                            <option value="maestria">Maestría</option>
+                            <option value="doctorado">Doctorado</option>
+                        </select>
+                        <small class="text-danger d-none" id="errorGrado">Selecciona al menos un grado académico.</small>
+                    </div>
+                    <input type="hidden" id="edad" value="">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
       </div>
       </div>
       
@@ -281,7 +229,7 @@
 
   <!-- jQery -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-  <script src="js/encargos.js"></script>
+  <script src="js/contacto.js"></script>
   
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
@@ -298,8 +246,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
-
-
   
 </body>
 

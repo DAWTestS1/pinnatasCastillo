@@ -1,0 +1,59 @@
+  .form_container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; /* Limitar el ancho máximo para pantallas grandes */
+  }
+  
+  .form_container .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .btn_box button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  .btn_box button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .book_section {
+      flex-direction: column; /* Asegura que el contenido se apile en pantallas pequeñas */
+      justify-content: flex-start;
+    }
+  
+    .form_container {
+      padding: 15px;
+      width: 90%; /* Reduce el ancho para que el formulario no quede tan amplio */
+    }
+  
+    .btn_box button {
+      width: 100%; /* Los botones ocupan el ancho completo */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .book_section {
+      padding: 10px;
+    }
+  
+    .form_container {
+      padding: 10px;
+      width: 95%; /* Reducción adicional en pantallas muy pequeñas */
+    }
+  
+    .btn_box button {
+      font-size: 14px; /* Ajustar tamaño de texto en botones */
+    }
+  }
+  
