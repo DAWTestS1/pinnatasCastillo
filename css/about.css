@@ -47,8 +47,8 @@
   .video-box {
     position: relative;
     padding-bottom: 86.50%; 
-
-    height: 0;
+    margin-left: 6%;
+    margin-right: 6%;
     overflow: hidden;
     max-width: 100%;
     background: #000;
