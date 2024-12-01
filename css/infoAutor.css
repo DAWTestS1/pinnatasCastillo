@@ -1,0 +1,46 @@
+/* Sección "about_section" */
+.about_section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+
+.about_section .img-box img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about_section .detail-box {
+  padding: 20px;
+}
+
+.about_section .heading_container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about_section p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.about_section ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.about_section ul li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about_section .btn {
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+#btn{
+  background-color: rgb(120, 120, 172);
+}
+

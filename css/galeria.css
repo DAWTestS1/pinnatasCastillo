@@ -1,0 +1,112 @@
+
+
+/* Estilo general del contenedor de productos */
+#galeriaBox{
+  height: 400px; /* Define una altura fija */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd; 
+  border-radius: 8px; /* Opcional: agrega bordes redondeados */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+/* Asegura que las imágenes tengan un tamaño uniforme */
+#imgGaleria img {
+  width: 100%;
+  height: 200px; /* Define una altura fija para las imágenes */
+  object-fit: contain; /* Asegura que las imágenes se ajusten al espacio sin distorsionarse */
+}
+
+/* Estilo para la sección de detalles */
+.detail-box {
+  padding: 10px;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Mantiene el texto y botones alineados */
+#detailGaleria h5 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#detailGaleria p {
+  flex-grow: 1;
+  text-align: justify;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+#detailGaleria .options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Contenedor general del pop-up */
+#popup-container {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Se asegura que esté encima de todo */
+  overflow: hidden; 
+}
+/* Contenido del pop-up */
+.popup-content {
+  position: relative;
+  width: 80%; /* Ancho fijo de la ventana emergente */
+  max-width: 800px; /* Limita el tamaño máximo */
+  height: 70%; /* Altura fija del pop-up */
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* Evita que el contenido desborde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro del pop-up */
+#popup-image {
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  height: 100%; /* La imagen ocupa todo el alto disponible */
+  object-fit: contain; /* Ajusta la imagen para que se redimensione sin distorsionarse */
+  display: block;
+}
+
+/* Botón de cierre */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+
+
